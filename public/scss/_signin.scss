@@ -1,0 +1,105 @@
+.signin{
+  background-color: #efe9e7;
+  text-align: center;
+  color: #3D1101;
+  padding: 50px 0;
+  h2{
+    font-family: 'NotoSansCJKtc-Black';
+    font-size: 48px;
+    color: #3D1101;
+  }
+  p{
+    font-family: 'NotoSansCJKtc-Mediu'm;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 35px;
+  }
+  .reg-box{
+    text-align: left;
+    padding: 15px;
+    max-width: 620px;
+    margin: 0 auto;
+    border-top: 3px solid #FF5E45;
+    box-shadow: 6px 6px 16px rgba(217,210,200,0.51),-6px -6px 26px rgba(255,255,255,0.83);
+    @include phone{
+      padding: 10px;
+    }
+    h5{
+      text-align: center;
+      font-family: 'NotoSansCJKtc-Black';
+      font-size: 18px;
+    }
+    .reg-flex{
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: nowrap;
+      @include phone{
+        flex-wrap: wrap;
+      }
+      p{
+        font-size: 18px;
+        line-height: 22px;
+        display: block;
+        width: 50%;
+        margin-right: 20px;
+        @include phone{
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+      form{
+        width: 50%;
+        position: relative;
+        padding-bottom: 62px;
+        @include phone{
+          width: 100%;
+        }
+        label{
+          display: inline-block;
+          padding-top: 16px;
+          padding-bottom: 3px;
+        }
+        input:not(.sig-a):not(.sub){
+          display: block;
+          width: 100%;
+          height: 28px;
+          background: #FFFFFF;
+          border: 1px solid #CCCCCC;
+          box-shadow: inset 0px 1px 0px 0px #ECECEC;
+          border-radius: 3px;
+        }
+        .pw + .pw{
+          margin-top: 12px;
+        }
+        > a{
+          display: inline-block;
+          font-size: 14px;
+          color: #FF5E45;
+          padding-top: 1px;
+          padding-bottom: 30px;
+          &:hover{
+            color: darken( #FF5E45, 10%);
+          }
+        }
+        .sub{
+          position: absolute;
+          bottom: 0;
+          right: -2px;
+          width: 125px;
+          height: 32px;
+          border-radius: 3px;
+          font-family: 'PingFangTC-Regular';
+          font-size: 14px;
+          color: #FFFFFF;
+          border-radius: 3px;
+          background: #F56C23;
+          cursor: pointer;
+          padding: 0;
+          &:hover{
+            background-color: darken( #F56C23, 5%);
+          }
+        }
+      }
+    }
+  }
+}

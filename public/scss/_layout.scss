@@ -1,0 +1,180 @@
+$small: 16px;
+$medium: 24px;
+$big: 36px;
+.wrap{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.header{
+  background-image: url(../images/header_desktop.png);
+  background-position: center;
+  height: 420px;
+  text-align: center;
+  @include phone{
+    background-image: url(../images/header_mobile.png);
+  }
+  .nav-bar{
+    background: rgba(0,0,0,0.75);
+    @include phone(){
+      position: relative;
+    }
+    .logo{
+      background: url(../images/logo_w@svg.svg) no-repeat;
+      width: 120px;
+      height: 24px;
+      margin: 16px 42px;
+      float: left;
+      @include hide-text();
+      @include pad(){
+        margin-left: 13px;
+      }
+    }
+    .nav-link{
+      float: right;
+      margin-right: 33px;
+      @include pad{
+        .goaway{
+          display: none;
+        }
+      }
+      @include phone{
+        transform: rotate(180deg)
+      }
+      li{
+        float: left;
+        a{
+          display: inline-block;
+          font-size: $small;
+          padding: 18px 15px;
+          color: #FFFFFF;
+          @include phone{
+            display: block;
+          }
+        }
+        @include phone{
+          float: none;
+          transform: rotate(180deg)
+        }
+      }
+      @include pad(){
+        margin-right: 0;
+      }
+      @include phone(){
+        background: #000;
+        // float: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+      }
+    }
+    .jq-show-link{
+      max-height: 280px;
+    }
+    .show-link{
+      display: none;
+      color: #fff;
+      font-size: 24px;
+      @include phone(){
+        display: block;
+        float: right;
+        margin: 16px 22px;
+      }
+    }
+  }
+  .title{
+    display: inline-block;
+    background: rgba(0,0,0,0.35);
+    color: #FFFFFF;
+    margin-top: 67px;
+    margin-bottom: 145px;
+    @include phone{
+      margin-top: 57px;
+      margin-bottom: 113px;
+    }
+    h2{
+      padding: 20px 42px 16px 22px;
+      span{
+        @include phone{
+          display: block;
+        }
+      }
+      @include phone{
+        line-height: 48px;
+        padding: 20px 6px 16px 6px;
+        letter-spacing: 2px;
+      }
+    }
+    p{
+      padding-bottom: 26px;
+      line-height: 21px;
+    }
+  }
+}
+.footer{
+  background-color: #efe9e7;
+  color: #3D1101;
+  padding: 50px 43px 50px 43px;
+  @include pad(){
+    padding: 50px 10px;
+  }
+  @include phone{
+    padding: 50px 10px;
+  }
+  .about{
+    float: left;
+    width: 32%;
+    margin-right: 21px;
+    @include pad(){
+      width: 31%;
+    }
+    @include phone{
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+    h3{
+      padding-bottom: 16px;
+    }
+    p{
+      line-height: 20px;
+    }
+  }
+  .contact{
+    float: left;
+    @include phone{
+      float: none;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    h3{
+      padding-bottom: 16px;
+    }
+    li{
+      line-height: 20px;
+    }
+  }
+  .footer-logo{
+    float: right;
+    img{
+      padding-bottom: 22px;
+    }
+    .sns li{
+      float: right;
+      padding-left: 16px;
+    }
+    .facebook{
+      color: #3c5993;
+    }
+    .google{
+      color: #d9463d;
+    }
+    .twitter{
+      color: #47acdf;
+    }
+  }
+}

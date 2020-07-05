@@ -1,0 +1,96 @@
+<% layout('layout') %>
+<div class="content">
+  <div class="feature" id="feature">
+    <h2>
+      客人總是在詢問
+      <br>
+      這麼好吃的秘訣是什麼
+    </h2>
+    <ul class="feature-list">
+      <li>
+        <img src="images/feature_1.png" alt="">
+        <h3>台灣本土蔬菜</h3>
+        <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.</p>
+      </li>
+      <li>
+        <img src="images/feature_2.png" alt="">
+        <h3>專業米其林廚師</h3>
+        <p>Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+      </li>
+      <li>
+        <img src="images/feature_3.png" alt="">
+        <h3>對於專業不能退讓</h3>
+        <p>Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+      </li>
+    </ul>
+  </div>
+  <div class="chef clearfix" id="chef">
+    <!-- <img src="images/main_chef_brown.png" alt=""> -->
+    <div class="chef-img"></div>
+    <div class="chef-intro">
+      <h2>今日主廚：帕金森、梅在帕</h2>
+      <h3>Tody Chef: Plum in Shock</h3>
+      <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin fermentum. Donec congue lorem a molestie bibendum.</p>
+    </div>
+  </div>
+  <div class="comments" id="id-comment">
+    <h2>聽聽別人的感想</h2>
+    <ul class="costumer">
+      <li>
+        <img src="images/avatar_1.png" alt="">
+        <div class="comment">
+          <h3>高雄一口吃</h3>
+          <p>自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+          <span> -- 產品經理</span>
+        </div>
+      </li>
+      <li>
+        <img src="images/avatar_2.png" alt="">
+        <div class="comment">
+          <h3>廟口小霸王</h3>
+          <p>自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+          <span> -- 金身道士</span>
+        </div>  
+      </li>
+      <li>
+        <img src="images/avatar_3.png" alt="">
+        <div class="comment clearfix">
+          <h3>春天也來了</h3>
+          <p>自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+          <span> -- 美麗萬分</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="map" id="map">
+    <h2>
+      我們的位置不太夠坐
+      <br>
+      要不要先定位呢？
+    </h2>
+    <div class="map-info">
+      <!-- <img src="images/Map.png" alt=""> -->
+      <div class="map-img"></div>
+      <form action="">
+        姓名
+        <input type="text" placeholder="六角講師吃尾牙" >
+        電話
+        <input type="phone" placeholder="02-1234567"> 
+        信箱
+        <input type="email" placeholder="test@gmail.com">
+        人數
+        <input type="number">
+        是否需要素食
+        <br>
+        <label for="yes">是</label>
+        <input type="radio" id="yes" name="vegan" class="radio">
+        <label for="no">否</label>
+        <input type="radio" checked id="no" name="vegan" class="radio">
+        <div class="btn-group">
+          <input type="button" value="取消" class="btn">
+          <input type="submit" value="送出" class="sub">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
