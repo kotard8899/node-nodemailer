@@ -23,54 +23,20 @@
           </a>
         </div>
       </div>
-      <ul class="prods">
-        <li>
-          <div class="ribbon-wrap">
-            <div class="ribbon">熱銷美食</div>
-          </div>
-          <a href="#" class="far fa-heart heart"></a>
-          <div class="img-box">
-            <img src="images/product_1.png" alt="">
-          </div>
-          <h3>經典漢堡套餐</h3>
-          <p>Classic Hamburger Package</p>
-          <h5>$120</h5>
-          <br>
-          <a href="#" class="truck"><span class="fas fa-truck"></span>加入購物車</a>
-        </li>
-        <li>
-          <a href="#" class="far fa-heart heart"></a>
-          <div class="img-box">
-            <img src="images/product_2.png" alt="">
-          </div>
-          <h3>英俊香腸</h3>
-          <p>Handsome Sausage</p>
-          <h5>$1,024</h5>
-          <br>
-          <a href="#" class="truck"><span class="fas fa-truck"></span>加入購物車</a>
-        </li>
-        <li>
-          <a href="#" class="far fa-heart heart"></a>
-          <div class="img-box">
-            <img src="images/product_3.png" alt="">
-          </div>
-          <h3>漢堡兄弟</h3>
-          <p>Hamburg Brothers</p>
-          <h5>$792</h5>
-          <br>
-          <a href="#" class="truck"><span class="fas fa-truck"></span>加入購物車</a>
-        </li>
-        <li>
-          <a href="#" class="far fa-heart heart"></a>
-          <div class="img-box">
-            <img src="images/product_4.png" alt="">
-          </div>
-          <h3>完美願望</h3>
-          <p>Dragon Ball Package</p>
-          <h5>$999,999</h5>
-          <br>
-          <a href="#" class="truck"><span class="fas fa-truck"></span>加入購物車</a>
-        </li>
+      <ul class="prods" id="productsList">
+        <% for(item of products) { %>
+          <li>
+            <a href="#" class="far fa-heart heart"></a>
+            <div class="img-box">
+              <img src="<%- item.img %>" alt="">
+            </div>
+            <h3><%- item.chTitle %></h3>
+            <p><%- item.enTitle %></p>
+            <h5>$<%- item.price %></h5>
+            <br>
+            <a href="#" class="truck"><span class="fas fa-truck"></span>加入購物車</a>
+          </li>
+        <% } %>
       </ul>
     </div>
   </div>
