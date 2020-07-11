@@ -71,21 +71,25 @@
     <div class="map-info">
       <!-- <img src="images/Map.png" alt=""> -->
       <div class="map-img"></div>
-      <form action="">
+      <form action="/post" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         姓名
-        <input type="text" placeholder="六角講師吃尾牙" >
+        <input type="text" placeholder="六角講師吃尾牙" name="name" id="name">
+        <%- errors[0] %>
         電話
-        <input type="phone" placeholder="02-1234567"> 
+        <input type="phone" placeholder="02-1234567" name="phone" id="phone">
+        <%- errors[1] %>
         信箱
-        <input type="email" placeholder="test@gmail.com">
+        <input type="email" placeholder="test@gmail.com" name="email" id="email">
+        <%- errors[2] %>
         人數
-        <input type="number">
+        <input type="number" name="number" id="number" value="1">
         是否需要素食
         <br>
         <label for="yes">是</label>
-        <input type="radio" id="yes" name="vegan" class="radio">
+        <input type="radio" id="yes" name="vegan" class="radio" value="吃素">
         <label for="no">否</label>
-        <input type="radio" checked id="no" name="vegan" class="radio">
+        <input type="radio" checked id="no" name="vegan" class="radio" value="不吃素">
         <div class="btn-group">
           <input type="button" value="取消" class="btn">
           <input type="submit" value="送出" class="sub">

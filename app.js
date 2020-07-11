@@ -1,11 +1,18 @@
 var createError = require('http-errors');
 var express = require('express');
-var path = require('path');
+var path = require('path');  
 var cookieParser = require('cookie-parser');
+// var bodyParser = require('body-parser');
+// var csrf = require('csurf');
+var session = require('express-session');
+var flash = require('connect-flash');
 var logger = require('morgan');
 
+// setup route middlewares
+// var csrfProtection = csrf({ cookie: true })
+// var parseForm = bodyParser.urlencoded({ extended: false })
+
 var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
 var menu = require('./routes/menu')
 var login = require('./routes/login')
 var signin = require('./routes/signin')
@@ -17,6 +24,12 @@ app.engine('ejs', engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(session({
+  secret: 'kotard',
+  resave: true,
+  saveUninitialized: true,
+}));
+app.use(flash());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
